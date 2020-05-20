@@ -103,10 +103,10 @@ please let me know by filing an issue in this repo
   - Result matching (TODO)
   - The `sarif:` URI scheme (TODO)
 - Appendices
-  - [Authoring rule metadata and result messages](docs/Authoring-rule-metadata-and-result-messages.md)
-  - [Glossary](docs/Glossary.md)
-  - [Resources](docs/Resources.md)
-  - The history of SARIF (TODO)
+  - [Appendix A: Authoring "good" SARIF](docs/Authoring-good-SARIF.md)
+  - [Appendix B: Authoring rule metadata and result messages](docs/Authoring-rule-metadata-and-result-messages.md)
+  - [Appenxix C: Glossary](docs/Glossary.md)
+  - [Appendix D: Resources](docs/Resources.md)
 
 ## Contributing
 
