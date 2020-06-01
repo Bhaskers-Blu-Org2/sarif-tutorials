@@ -1,6 +1,6 @@
 [Table of contents](../README.md#contents)
 
-# Appendix A: Authoring "good" SARIF
+# Appendix A: SARIF log file best practices
 
 ## Introduction
 
@@ -15,12 +15,14 @@ But sometimes the importance of a feature depends on how the SARIF file will be 
 For example, if it is the input to an automatic bug filing system,
 features which contribute to more informative, actionable bugs take on a greater importance.
 
+Usage scenarios aside, some optional features have proven in our experience to be particularly valuable,
+and we discuss those here as well.
+
 ## The SARIF validation tool
 
-Many of the best practices in this Appendix are enforced by the SARIF validation tool,
-which we'll refer to as the "validator",
-and which is available from NuGet as a "tool package".
-This tool defines a set of 
+Many but not all of the best practices in this Appendix are enforced by the SARIF validation tool (the "validator").
+You can run the validator on your own SARIF files to see how well they conform to best practices.
 
+The Appendix ["The SARIF Validation Tool"](./SARIF-validation-tool.md) explains how to install and use the validator.
 
 [Table of contents](../README.md#contents)
