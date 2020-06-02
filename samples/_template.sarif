@@ -16,7 +16,8 @@
           "ruleId": "TUT1001",
           "message": {
             "text": "The result."
-          }        }
+          }
+        }
       ],
       "columnKind": "utf16CodeUnits"
     }
