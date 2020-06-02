@@ -2,9 +2,7 @@
 
 # Appendix A: SARIF log file best practices
 
-## Introduction
-
-This Appendix describes best practices for the contents of SARIF log files.
+This Appendix recommends best practices for the contents of SARIF log files.
 
 Because of requirements imposed by OASIS, the SARIF specification always describes format features
 using the key words defined in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt), for example
@@ -14,20 +12,14 @@ and or **SHALL** (use of the feature is mandatory). There are no shades of gray 
 But sometimes the importance of a feature depends on how the SARIF file will be used.
 For example, if it is the input to an automatic bug filing system,
 features which contribute to more informative, actionable bugs take on a greater importance.
-
 Usage scenarios aside, some optional features have proven in our experience to be particularly valuable,
 and we discuss those here as well.
 
-## The SARIF validation tool
-
-Many but not all of the best practices in this Appendix are enforced by the SARIF validation tool (the "validator").
-You can run the validator on your own SARIF files to see how well they conform to best practices.
-
+Many but not all of the recommendations in this Appendix are enforced by the SARIF validation tool (the "validator").
+You can run the validator on your SARIF files to see how well they conform to these recommendations.
 The Appendix ["The SARIF Validation Tool"](./SARIF-validation-tool.md) explains how to install and use the validator.
 
-## A list of best practices
-
-### Result messages should be "dynamic" rather than "static"
+## Result messages should be "dynamic" rather than "static"
 
 The Appendix ["Authoring rule metadata and result messages"](./Authoring-rule-metadata-and-result-messages.md)
 provides detailed guidance on authoring informative, actionable result messages.
@@ -41,5 +33,17 @@ This information might include:
 Providing uniquely identifying information serves at least two purposes:
 - It gives developers the specific information they need to understand and solve the problem.
 - It avoids the "wall of bugs" phenomenon, where a long list of identical messages presents a psychological obstacle to the developer responsible for solving the problems.
+
+## Provide a $schema property that points to the final version of the SARIF schema.
+
+The property `sarifLog[$schema]` is important because it enables Intellisense in VS and other IDEs.
+Its value is a URI from which the SARIF JSON schema can be obtained.
+Make sure to use the final, released version of the schema.
+
+We recommend the value "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json".
+
+## Provide tool.version
+
+It's important to provide `tool.version` so that toolchains can tell if an approved version of the tool is in use.
 
 [Table of contents](../README.md#contents)
